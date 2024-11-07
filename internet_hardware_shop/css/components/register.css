@@ -1,0 +1,57 @@
+input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.5);
+}
+input.warned {
+    border-color: #ff6b6b;
+    box-shadow: 0px 0px 8px rgba(255, 107, 107, 0.5);
+}
+#register-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#register-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+.shake {
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+.warning {
+    display: none;
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.warning.show {
+    display: block;
+}
+input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
